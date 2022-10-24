@@ -1,0 +1,73 @@
+:root {
+    --sign-in-btn: #1A73e8;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* default deyeri: content-box */
+    text-decoration: none;
+
+}
+
+body{
+    height: 100vh;
+}
+
+.container{
+    height: 100%;
+    display: flex;
+    flex-direction: column; /*default deyeri: row */
+    /* justify content ve align-items (flex directiondan asilidir) */
+    /* space-between - ilk child en basa son child en sona ve ortalarda childler arasi bosluq
+    space-around heresinin oz etrafinda bosluq
+    space-evenly - eyni bosluq ama px ferqi var */
+    justify-content: space-between;
+    
+    
+}
+
+
+
+.s-icon,
+.menu-icon,
+.vs-icon{
+    width: 24px;
+}
+
+/*Header hisse*/
+
+.header{
+    display: flex;
+    justify-content: flex-end; /*default: flex-start*/
+    padding: 10px;
+    
+}
+/* > ile child selecor, bosluqla descendant selector  nav a*/
+/* nav{
+    display: flex;
+    align-items: center; 
+
+    bootstrap mentiqiyle deyisdik
+} */
+
+/* psevdoklaslar */
+nav > a:not(:last-child){
+    color:#000;
+    margin-right: 5px;
+}
+
+nav a:last-child{
+    border: 1px solid #1A73e8;
+    width: 96px;
+    height: 36px;
+    justify-content: center;
+    background-color: var(--sign-in-btn);
+    color:#fff;
+    border-radius: 4px;
+}
+
+.dyc{
+    display: flex;
+    align-items: center;
+}
